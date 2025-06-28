@@ -8,28 +8,74 @@
     href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
     rel="stylesheet"
   />
+  <style>
+    .hero-section {
+      position: relative;
+      margin-top: 56px; /* Adjust if navbar height changes */
+    }
+    .hero-background img {
+      width: 100%;
+      max-height: 400px;
+      object-fit: cover;
+    }
+    .hero-gradient-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.6));
+    }
+    .profile-photo-container {
+      z-index: 2;
+    }
+    .shadow-text {
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.8);
+    }
+  </style>
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <!-- Navbar 
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
     <div class="container">
       <a class="navbar-brand" href="#">S Sivraj</a>
     </div>
   </nav>
-
-  <div class="container mt-4">
-    <div class="text-center">
-      <h1>S Sivraj</h1>
-      <p class="lead">Research Scholar, IIT Delhi</p>
+ -->
+  <!-- Hero Section -->
+  <section class="hero-section text-center text-white">
+    <!-- Banner Image with overlay -->
+    <div class="hero-background position-relative">
+      <img src="images/banner.jpg" alt="Banner Image">
+      <div class="hero-gradient-overlay"></div>
     </div>
 
+    <!-- Profile photo and intro content -->
+    <div class="profile-photo-container position-absolute top-50 start-50 translate-middle">
+      <img src="images/sivraj.jpeg" alt="S Sivraj Photo" class="rounded-circle border border-3 border-white shadow" style="width: 180px; height: 180px; object-fit: cover;">
+      <h1 class="mt-3 shadow-text">S Sivraj</h1>
+      <p class="lead shadow-text">Research Scholar, IIT Delhi</p>
+
+      <!-- CTA Buttons 
+      <div class="mt-3">
+        <a href="docs/CV_Sivraj.pdf" class="btn btn-primary btn-sm me-2" target="_blank">View CV</a>
+        <a href="#contact" class="btn btn-outline-light btn-sm me-2">Contact</a>
+        <a href="https://scholar.google.com/citations?hl=en&user=8l9nGPMAAAAJ" class="btn btn-success btn-sm me-2" target="_blank">Google Scholar</a>
+        <a href="https://www.linkedin.com/in/s-sivraj-407995155" class="btn btn-info btn-sm" target="_blank">LinkedIn</a>
+      </div>
+	  -->
+    </div>
+  </section>
+
+  <!-- Main Content -->
+  <div class="container mt-5">
+    <!-- About Me -->
     <section id="about" class="mt-5">
       <h2>About Me</h2>
       <p>
-        I am a research scholar at IIT Delhi working on the design and detailing of steel-concrete composite beam column joints. My research focuses on improving structural performance, connection detailing, and seismic resilience of composite frames.
+        I am a research scholar at IIT Delhi working on the design and detailing of steel-concrete composite beam-column joints. My research focuses on improving structural performance, connection detailing, and seismic resilience of composite frames.
       </p>
     </section>
 
+    <!-- Research Interests -->
     <section id="research" class="mt-5">
       <h2>Research Interests</h2>
       <ul>
@@ -40,132 +86,113 @@
       </ul>
     </section>
 
-    	
-<section id="education" class="mt-5">
-  <h2>Education</h2>
+    <!-- Education -->
+    <section id="education" class="mt-5">
+      <h2>Education</h2>
 
-  <!-- Ph.D. -->
-  <div class="card mb-3 shadow-sm">
-    <div class="row g-0">
-      <div class="col-md-2 d-flex align-items-center justify-content-center">
-        <img src="images/IITD.png" class="img-fluid p-2" alt="IIT Delhi Logo" style="max-height: 150px;">
-      </div>
-      <div class="col-md-10">
-        <div class="card-body">
-          <h5 class="card-title">Ph.D. in Structural Engineering</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Indian Institute of Technology Delhi</h6>
-          <p class="card-text"><strong>2021 – Present</strong></p>
-          <p class="card-text">
-            Research focused on the design and detailing of steel-concrete composite beam-column joints.
-          </p>
+      <!-- Ph.D. -->
+      <div class="card mb-3 shadow-sm">
+        <div class="row g-0">
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <img src="images/IITD.png" class="img-fluid p-2" alt="IIT Delhi Logo" style="max-height: 150px;">
+          </div>
+          <div class="col-md-10">
+            <div class="card-body">
+              <h5 class="card-title">Ph.D. in Structural Engineering</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Indian Institute of Technology Delhi</h6>
+              <p class="card-text"><strong>2021 – Present</strong></p>
+              <p class="card-text">Research focused on the design and detailing of steel-concrete composite beam-column joints.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- M.Tech. -->
-  <div class="card mb-3 shadow-sm">
-    <div class="row g-0">
-      <div class="col-md-2 d-flex align-items-center justify-content-center">
-        <img src="images/vnit.jpeg" class="img-fluid p-2" alt="[Your M.Tech University] Logo" style="max-height: 150px;">
-      </div>
-      <div class="col-md-10">
-        <div class="card-body">
-          <h5 class="card-title">M.Tech. in Structural Dynamics and Earthquake Engineering</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Visvesvaraya National Institue of Technology, Nagpur</h6>
-          <p class="card-text"><strong>[2016 - 2018]</strong></p>
-          <p class="card-text">
-            Energy based seismic design.
-          </p>
+      <!-- M.Tech. -->
+      <div class="card mb-3 shadow-sm">
+        <div class="row g-0">
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <img src="images/vnit.jpeg" class="img-fluid p-2" alt="VNIT Logo" style="max-height: 150px;">
+          </div>
+          <div class="col-md-10">
+            <div class="card-body">
+              <h5 class="card-title">M.Tech. in Structural Dynamics and Earthquake Engineering</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Visvesvaraya National Institute of Technology, Nagpur</h6>
+              <p class="card-text"><strong>2016 – 2018</strong></p>
+              <p class="card-text">Energy based seismic design.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- B.Tech. -->
-  <div class="card mb-3 shadow-sm">
-    <div class="row g-0">
-      <div class="col-md-2 d-flex align-items-center justify-content-center">
-        <img src="images/dbrait.jfif" class="img-fluid p-2" alt="[Your B.Tech University] Logo" style="max-height: 150px;">
-      </div>
-      <div class="col-md-10">
-        <div class="card-body">
-          <h5 class="card-title">B.Tech. in Civil Engineering</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Dr. B R Ambedkar Institute of Technology, Port Blair</h6>
-          <p class="card-text"><strong>[Year – Year]</strong></p>
-          <p class="card-text">
-            Moment curvature curve for concrete beam and column.
-          </p>
+      <!-- B.Tech. -->
+      <div class="card mb-3 shadow-sm">
+        <div class="row g-0">
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <img src="images/dbrait.jfif" class="img-fluid p-2" alt="DBRAIT Logo" style="max-height: 150px;">
+          </div>
+          <div class="col-md-10">
+            <div class="card-body">
+              <h5 class="card-title">B.Tech. in Civil Engineering</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Dr. B R Ambedkar Institute of Technology, Port Blair</h6>
+              <p class="card-text"><strong>2011 – 2015</strong></p>
+              <p class="card-text">Moment curvature curve for concrete beam and column.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
+    <!-- Work Experience -->
+    <section id="work-experience" class="mt-5">
+      <h2>Work Experience</h2>
 
-	
-<section id="work-experience" class="mt-5">
-  <h2>Work Experience</h2>
-
-  <div class="card mb-3 shadow-sm">
-    <div class="row g-0">
-      <div class="col-md-2 d-flex align-items-center justify-content-center">
-        <img src="images/Thornton.png" class="img-fluid p-2" alt="Thornton Tomasetti Logo" style="max-height: 150px;">
-      </div>
-      <div class="col-md-10">
-        <div class="card-body">
-          <h5 class="card-title">Senior Engineer</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Thornton Tomasetti</h6>
-          <p class="card-text"><strong>Jan 2019 – Jan 2021</strong></p>
-          <p class="card-text">
-            Worked as a Senior Engineer focusing on structural analysis, design optimisation, and performance evaluation of steel and composite structures in complex projects.
-          </p>
+      <!-- Thornton Tomasetti -->
+      <div class="card mb-3 shadow-sm">
+        <div class="row g-0">
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <img src="images/Thornton.png" class="img-fluid p-2" alt="Thornton Tomasetti Logo" style="max-height: 150px;">
+          </div>
+          <div class="col-md-10">
+            <div class="card-body">
+              <h5 class="card-title">Senior Engineer</h5>
+              <h6 class="card-subtitle mb-2 text-muted">Thornton Tomasetti</h6>
+              <p class="card-text"><strong>Jan 2019 – Jan 2021</strong></p>
+              <p class="card-text">Worked as a Senior Engineer focusing on structural analysis, design optimisation, and performance evaluation of steel and composite structures in complex projects.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <div class="card mb-3 shadow-sm">
-    <div class="row g-0">
-      <div class="col-md-2 d-flex align-items-center justify-content-center">
-        <img src="images/Stup.png" class="img-fluid p-2" alt="STUP Consultants Logo" style="max-height: 150px;">
-      </div>
-      <div class="col-md-10">
-        <div class="card-body">
-          <h5 class="card-title">Trainee Design Engineer</h5>
-          <h6 class="card-subtitle mb-2 text-muted">STUP Consultants Pvt. Ltd., Navi Mumbai</h6>
-          <p class="card-text"><strong>Jul 2018 – Dec 2018</strong></p>
-          <p class="card-text">
-            Worked as a Trainee Design Engineer with exposure to structural design, detailing, and drafting of reinforced concrete and steel structures for infrastructure projects.
-          </p>
+      <!-- STUP Consultants -->
+      <div class="card mb-3 shadow-sm">
+        <div class="row g-0">
+          <div class="col-md-2 d-flex align-items-center justify-content-center">
+            <img src="images/Stup.png" class="img-fluid p-2" alt="STUP Consultants Logo" style="max-height: 150px;">
+          </div>
+          <div class="col-md-10">
+            <div class="card-body">
+              <h5 class="card-title">Trainee Design Engineer</h5>
+              <h6 class="card-subtitle mb-2 text-muted">STUP Consultants Pvt. Ltd., Navi Mumbai</h6>
+              <p class="card-text"><strong>Jul 2018 – Dec 2018</strong></p>
+              <p class="card-text">Worked as a Trainee Design Engineer with exposure to structural design, detailing, and drafting of reinforced concrete and steel structures for infrastructure projects.</p>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-
+    <!-- Publications -->
     <section id="publications" class="mt-5">
       <h2>Conferences</h2>
       <ul>
-      <li>
-      Sivraj, S., S. Jena, and D. R. Sahoo. (2024). Numerical modelling of steel beam-CFST column frame considering joint behavior. <i>World Conf. Earthq. Eng. 2024</i>. Milan, Italy.
-    </li>
-    <li>
-      Sivraj, S., D. Yadav, D. R. Sahoo, and A. Gupta. (2023). Numerical Investigation of Joint Shear Strength of Circular CFST Column Connected to Steel I-Beam with External Diaphragm. <i>Can. Conf. - Pacific Conf. Earthq. Eng. 2023, 11</i>. Vancouver, B. C., Canada.
-    </li>
-    <li>
-      Sivraj, S., Liza, Sahoo, D.R. (2024). Lateral Seismic Performance Assessment of CFST-RC Hybrid Frame Structures. In: Mazzolani, F.M., Piluso, V., Nastri, E., Formisano, A. (eds) Proceedings of the 11th International Conference on Behaviour of Steel Structures in Seismic Areas. STESSA 2024. Lecture Notes in Civil Engineering, vol 520. Springer, Cham. 
-      <a href="https://doi.org/10.1007/978-3-031-62888-7_4" target="_blank">https://doi.org/10.1007/978-3-031-62888-7_4</a>
-    </li>
-  </ul>
-  <p>
-    View all publications on 
-    <a href="https://scholar.google.com/citations?hl=en&user=8l9nGPMAAAAJ" target="_blank">Google Scholar</a>.
-  </p>
-</section>
+        <li>Sivraj, S., S. Jena, and D. R. Sahoo. (2024). Numerical modelling of steel beam-CFST column frame considering joint behavior. <i>World Conf. Earthq. Eng. 2024</i>. Milan, Italy.</li>
+		<li>Sivraj, S., Liza, Sahoo, D.R. (2024). Lateral Seismic Performance Assessment of CFST-RC Hybrid Frame Structures. In: Mazzolani, F.M., Piluso, V., Nastri, E., Formisano, A. (eds) Proceedings of the 11th International Conference on Behaviour of Steel Structures in Seismic Areas. STESSA 2024. Lecture Notes in Civil Engineering, vol 520. Springer, Cham. <a href="https://doi.org/10.1007/978-3-031-62888-7_4" target="_blank">https://doi.org/10.1007/978-3-031-62888-7_4</a></li>
+        <li>Sivraj, S., D. Yadav, D. R. Sahoo, and A. Gupta. (2023). Numerical Investigation of Joint Shear Strength of Circular CFST Column Connected to Steel I-Beam with External Diaphragm. <i>Can. Conf. - Pacific Conf. Earthq. Eng. 2023, 11</i>. Vancouver, B. C., Canada.</li>        
+      </ul>
+      <p>View all publications on <a href="https://scholar.google.com/citations?hl=en&user=8l9nGPMAAAAJ" target="_blank">Google Scholar</a>.</p>
+    </section>
 
-
+    <!-- Contact -->
     <section id="contact" class="mt-5 mb-5">
       <h2>Contact</h2>
       <p>Email: <a href="mailto:sivraj111@gmail.com">sivraj111@gmail.com</a></p>
@@ -177,8 +204,10 @@
     </section>
   </div>
 
+  <!-- Footer -->
   <footer class="bg-dark text-white text-center p-3">
     &copy; 2025 S Sivraj
   </footer>
+
 </body>
 </html>
